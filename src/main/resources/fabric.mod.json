@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "cobalt_unit",
+  "version": "${version}",
+  "name": "Unit",
+  "description": "NanoVG-based UI library for Minecraft!",
+  "authors": ["QuiteBoring"],
+  "contact": {
+    "homepage": "https://github.com/CobaltScripts/",
+    "sources": "https://github.com/CobaltScripts/Unit"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/cobalt/unit/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      {
+        "adapter": "kotlin",
+        "value": "org.cobalt.unit.Unit"
+      }
+    ]
+  },
+  "mixins": [
+    "unit.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "~${minecraft_version}",
+    "java": ">=21",
+    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
+  }
+}
