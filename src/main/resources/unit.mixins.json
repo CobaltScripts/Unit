@@ -4,7 +4,8 @@
   "package": "org.cobalt.unit.mixins",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "MixinTitleScreen"
+    "GlStateManagerMixin",
+    "MinecraftMixin"
   ],
   "injectors": {
     "defaultRequire": 1

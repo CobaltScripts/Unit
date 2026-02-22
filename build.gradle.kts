@@ -24,8 +24,17 @@ repositories {
 dependencies {
   minecraft(libs.minecraft)
   mappings(loom.officialMojangMappings())
-
   modImplementation(libs.bundles.fabric)
+
+  implementation(libs.nanovg) {
+    include(this)
+  }
+
+  listOf("windows", "linux", "macos", "macos-arm64").forEach {
+    implementation(variantOf(libs.nanovg) { classifier("natives-$it") }) {
+      include(this)
+    }
+  }
 }
 
 tasks {
