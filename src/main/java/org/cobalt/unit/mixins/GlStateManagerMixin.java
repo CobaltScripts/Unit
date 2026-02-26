@@ -1,7 +1,7 @@
 package org.cobalt.unit.mixins;
 
 import com.mojang.blaze3d.opengl.GlStateManager;
-import org.cobalt.unit.util.helper.TextureTracker;
+import org.cobalt.unit.utils.helper.TextureTracker;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

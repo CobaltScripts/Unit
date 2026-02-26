@@ -1,4 +1,4 @@
-package org.cobalt.unit.util.helper
+package org.cobalt.unit.utils.helper
 
 /**
  * Implementation from vexel by StellariumMC

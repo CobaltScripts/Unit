@@ -1,8 +1,8 @@
 package org.cobalt.unit
 
 import net.fabricmc.api.ClientModInitializer
-import org.cobalt.unit.util.render.NanoVGImpl
-import org.cobalt.unit.util.render.Renderer
+import org.cobalt.unit.utils.render.NanoVGImpl
+import org.cobalt.unit.utils.render.Renderer
 
 object Unit : ClientModInitializer{
 

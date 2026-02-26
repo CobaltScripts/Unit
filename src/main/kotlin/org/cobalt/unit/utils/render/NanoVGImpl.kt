@@ -1,4 +1,42 @@
-package org.cobalt.unit.util.render
+/*
+ * BSD 3-Clause License
+ *
+ * Copyright (c) 2023-2025, odtheking
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice, this
+ *    list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * 3. Neither the name of the copyright holder nor the names of its
+ *    contributors may be used to endorse or promote products derived from
+ *    this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+ * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ * CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ * Portions of this file are derived from OdinFabric
+ * Copyright (c) odtheking
+ * Licensed under BSD-3-Clause
+ *
+ * Modifications and additions:
+ * Licensed under GPL-3.0
+ */
+
+package org.cobalt.unit.utils.render
 
 import com.mojang.blaze3d.opengl.GlDevice
 import com.mojang.blaze3d.opengl.GlStateManager
@@ -8,14 +46,14 @@ import java.nio.ByteBuffer
 import kotlin.math.max
 import kotlin.math.min
 import net.minecraft.client.Minecraft
-import org.cobalt.unit.util.alpha
-import org.cobalt.unit.util.blue
-import org.cobalt.unit.util.green
-import org.cobalt.unit.util.helper.Font
-import org.cobalt.unit.util.helper.Gradient
-import org.cobalt.unit.util.helper.Image
-import org.cobalt.unit.util.helper.TextureTracker
-import org.cobalt.unit.util.red
+import org.cobalt.unit.utils.alpha
+import org.cobalt.unit.utils.blue
+import org.cobalt.unit.utils.green
+import org.cobalt.unit.utils.helper.Font
+import org.cobalt.unit.utils.helper.Gradient
+import org.cobalt.unit.utils.helper.Image
+import org.cobalt.unit.utils.helper.TextureTracker
+import org.cobalt.unit.utils.red
 import org.lwjgl.nanovg.NVGColor
 import org.lwjgl.nanovg.NVGPaint
 import org.lwjgl.nanovg.NanoSVG.*
@@ -27,14 +65,6 @@ import org.lwjgl.stb.STBImage.stbi_load_from_memory
 import org.lwjgl.system.MemoryUtil.memAlloc
 import org.lwjgl.system.MemoryUtil.memFree
 
-/**
- * Implementation from OdinFabric & vexel
- * Original work:
- * <a href="https://github.com/odtheking/OdinFabric">OdinFabric</a>
- * <a href="https://github.com/StellariumMC/vexel">vexel</a>
- *
- * @author OdinFabric & vexel
- */
 internal object NanoVGImpl : Renderer {
 
   private val mc: Minecraft =

@@ -1,8 +1,8 @@
-package org.cobalt.unit.util.render
+package org.cobalt.unit.utils.render
 
-import org.cobalt.unit.util.helper.Font
-import org.cobalt.unit.util.helper.Gradient
-import org.cobalt.unit.util.helper.Image
+import org.cobalt.unit.utils.helper.Font
+import org.cobalt.unit.utils.helper.Gradient
+import org.cobalt.unit.utils.helper.Image
 
 interface Renderer {
 

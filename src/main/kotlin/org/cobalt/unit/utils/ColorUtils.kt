@@ -1,11 +1,4 @@
-package org.cobalt.unit.util
-
-/**
- * Implementation from OdinFabric
- * Original work: <a href="https://github.com/odtheking/OdinFabric">OdinFabric</a>
- *
- * @author OdinFabric
- */
+package org.cobalt.unit.utils
 
 internal inline val Int.red get() = this shr 16 and 0xFF
 internal inline val Int.green get() = this shr 8 and 0xFF

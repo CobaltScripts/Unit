@@ -1,15 +1,9 @@
-package org.cobalt.unit.util
+package org.cobalt.unit.utils
 
 import java.io.InputStream
 import java.net.HttpURLConnection
 import java.net.URI
 
-/**
- * Implementation from OdinFabric
- * Original work: <a href="https://github.com/odtheking/OdinFabric">OdinFabric</a>
- *
- * @author OdinFabric
- */
 internal fun setupConnection(url: String, timeout: Int = 5000, useCaches: Boolean = true): InputStream {
   val connection = URI(url).toURL().openConnection() as HttpURLConnection
   connection.setRequestMethod("GET")
