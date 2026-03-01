@@ -80,4 +80,9 @@ interface Renderer {
   fun color(color1: Int, color2: Int)
   fun gradient(color1: Int, color2: Int, x: Float, y: Float, width: Float, height: Float, direction: Gradient)
 
+  companion object {
+    @JvmStatic
+    fun getRenderer(): Renderer = NanoVGImpl
+  }
+
 }

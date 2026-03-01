@@ -52,7 +52,6 @@ import org.cobalt.unit.utils.green
 import org.cobalt.unit.utils.helper.Font
 import org.cobalt.unit.utils.helper.Gradient
 import org.cobalt.unit.utils.helper.Image
-import org.cobalt.unit.utils.helper.TextureTracker
 import org.cobalt.unit.utils.red
 import org.lwjgl.nanovg.NVGColor
 import org.lwjgl.nanovg.NVGPaint
@@ -123,9 +122,9 @@ internal object NanoVGImpl : Renderer {
     GlStateManager._blendFuncSeparate(770, 771, 1, 0)
     GlStateManager._glUseProgram(0)
 
-    if (TextureTracker.prevActiveTexture != -1) {
-      GlStateManager._activeTexture(TextureTracker.prevActiveTexture)
-      if (TextureTracker.prevBoundTexture != -1) GlStateManager._bindTexture(TextureTracker.prevBoundTexture)
+    if (StateTracker.prevActiveTexture != -1) {
+      GlStateManager._activeTexture(StateTracker.prevActiveTexture)
+      if (StateTracker.prevBoundTexture != -1) GlStateManager._bindTexture(StateTracker.prevBoundTexture)
     }
 
     GlStateManager._glBindFramebuffer(GL30.GL_FRAMEBUFFER, 0)
@@ -510,4 +509,13 @@ internal object NanoVGImpl : Renderer {
 
 }
 
+internal object StateTracker {
+
+  @JvmField
+  var prevActiveTexture = -1
+
+  @JvmField
+  var prevBoundTexture = -1
+
+}
 

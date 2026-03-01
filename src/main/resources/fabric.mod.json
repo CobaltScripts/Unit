@@ -12,21 +12,13 @@
   "license": "GPL-3.0",
   "icon": "assets/cobalt/unit/icon.png",
   "environment": "*",
-  "entrypoints": {
-    "client": [
-      {
-        "adapter": "kotlin",
-        "value": "org.cobalt.unit.Unit"
-      }
-    ]
-  },
   "mixins": [
     "unit.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
-    "minecraft": "~${minecraft_version}",
+    "fabricloader": ">=${fabricLoaderVersion}",
+    "minecraft": "~${minecraftVersion}",
     "java": ">=21",
-    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
+    "fabric-language-kotlin": ">=${fabricKotlinVersion}"
   }
 }

@@ -4,6 +4,7 @@
   "package": "org.cobalt.unit.mixins",
   "compatibilityLevel": "JAVA_21",
   "client": [
+    "GameRendererMixin",
     "GlStateManagerMixin",
     "MinecraftMixin"
   ],
