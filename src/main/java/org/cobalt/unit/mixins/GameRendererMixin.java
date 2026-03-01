@@ -4,7 +4,6 @@ import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
-import org.cobalt.test.TestScreen;
 import org.cobalt.unit.screen.UIScreen;
 import org.cobalt.unit.utils.render.Renderer;
 import org.spongepowered.asm.mixin.Final;
