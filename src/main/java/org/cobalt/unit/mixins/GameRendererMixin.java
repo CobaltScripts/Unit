@@ -4,7 +4,8 @@ import net.minecraft.client.DeltaTracker;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.renderer.GameRenderer;
-import org.cobalt.unit.screen.UIScreen;
+import org.cobalt.test.TestScreen;
+import org.cobalt.unit.UIScreen;
 import org.cobalt.unit.utils.render.Renderer;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -30,6 +31,11 @@ public class GameRendererMixin {
 
     if (currentScreen instanceof UIScreen) {
       ((UIScreen) currentScreen).drawScreen(cobaltUnit$renderer);
+    }
+
+    // remove this later, as this is only for testing purposes
+    else {
+      this.minecraft.setScreenAndShow(TestScreen.INSTANCE);
     }
   }
 

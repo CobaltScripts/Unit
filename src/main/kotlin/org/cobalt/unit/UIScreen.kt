@@ -1,13 +1,12 @@
-package org.cobalt.unit.screen
+package org.cobalt.unit
 
 import net.minecraft.client.gui.screens.Screen
 import net.minecraft.network.chat.Component
-import org.cobalt.unit.UIWindow
 import org.cobalt.unit.utils.render.Renderer
 
 abstract class UIScreen : Screen(Component.empty()) {
 
-  val window: UIWindow = UIWindow()
+  val window: Window = Window()
 
   fun drawScreen(renderer: Renderer) {
     val minecraftWindow = minecraft.window
@@ -16,6 +15,12 @@ abstract class UIScreen : Screen(Component.empty()) {
 
     renderer.render(screenWidth, screenHeight) {
       window.renderComponent(renderer)
+    }
+  }
+
+  class Window : UIComponent() {
+    override fun renderComponent(renderer: Renderer) {
+      children.forEach { it.renderComponent(renderer) }
     }
   }
 
