@@ -18,10 +18,6 @@ abstract class UIScreen : Screen(Component.empty()) {
     }
   }
 
-  class Window : UIComponent() {
-    override fun renderComponent(renderer: Renderer) {
-      children.forEach { it.renderComponent(renderer) }
-    }
-  }
+  class Window : UIComponent()
 
 }
