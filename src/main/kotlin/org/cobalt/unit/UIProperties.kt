@@ -1,11 +1,11 @@
 package org.cobalt.unit
 
-import java.awt.Color
 import org.cobalt.unit.dsl.pixels
 import org.cobalt.unit.properties.PositionProperty
 import org.cobalt.unit.properties.SizeProperty
 import org.cobalt.unit.utils.Fonts
 import org.cobalt.unit.utils.helper.Font
+import java.awt.Color
 
 class UIProperties {
 

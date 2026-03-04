@@ -1,7 +1,7 @@
 package org.cobalt.unit
 
 import java.awt.Color
-import kotlin.io.resolve
+import org.cobalt.unit.effects.Effect
 import org.cobalt.unit.properties.PositionProperty
 import org.cobalt.unit.properties.SizeProperty
 import org.cobalt.unit.utils.helper.Font
@@ -9,11 +9,12 @@ import org.cobalt.unit.utils.render.Renderer
 
 abstract class UIComponent {
 
+  @JvmField
   protected var parent: UIComponent? = null
-  protected val children = mutableListOf<UIComponent>()
-  protected val effects = mutableListOf<UIEffect>()
-
   var properties: UIProperties = UIProperties()
+
+  protected val children = mutableListOf<UIComponent>()
+  protected val effects = mutableListOf<Effect>()
 
   open fun renderComponent(renderer: Renderer) {
     if (children.isNotEmpty()) {
@@ -71,10 +72,11 @@ abstract class UIComponent {
     return parentY + ownY
   }
 
-  fun getWidth(): Float = properties.width.resolve(this)
-  fun getHeight(): Float = properties.height.resolve(this)
+  open fun getWidth(): Float = properties.width.resolve(this)
+  open fun getHeight(): Float = properties.height.resolve(this)
   fun getColor(): Color = properties.color
   fun getFont(): Font = properties.font
   fun getTextSize(): Float = properties.textSize.resolve(this)
+  fun getParent(): UIComponent? = parent
 
 }

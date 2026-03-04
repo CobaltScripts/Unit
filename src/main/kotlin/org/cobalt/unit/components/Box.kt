@@ -3,7 +3,7 @@ package org.cobalt.unit.components
 import org.cobalt.unit.UIComponent
 import org.cobalt.unit.utils.render.Renderer
 
-class UIBox(
+class Box(
   val radius: Float? = null,
 ) : UIComponent() {
 
